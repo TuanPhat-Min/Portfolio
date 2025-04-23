@@ -3,12 +3,6 @@
     padding: 0; 
     box-sizing: border-box;
 }
-@media (max-width: 768px) {
-  body {
-    font-size: 16px;
-    padding: 10px;
-  }
-}
 body{
     background: black;
     background: linear-gradient(100deg,rgba(0, 0, 0, 1) 20%, rgba(255, 0, 0, 1) 80%);
@@ -171,6 +165,7 @@ span{
     padding: 5px;
     transition: all 0.6s ease;
     cursor: pointer;
+    color: black;
 }
 .start h2{
     font-size: 15px;
@@ -209,6 +204,7 @@ span{
     padding: 5px;
     transition: all 0.6s ease;
     cursor: pointer;
+    color: black;
     
 }
 .readmore:hover i{
@@ -254,7 +250,7 @@ span{
     display: flex;
     flex-direction: column;
     gap: 10px;
-    border:2px solid whitesmoke ;
+    border:2px solid white ;
     width: 350x;
     height: 400px;
     padding: 20px;
@@ -282,6 +278,7 @@ span{
     gap: 5px;
     cursor: pointer;
     transition: all 0.6s ease;
+    color: black;
 }
 .button_project:hover{
   transform: translateY(-5px);
