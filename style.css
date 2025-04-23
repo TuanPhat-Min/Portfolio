@@ -119,11 +119,11 @@ main{
     height: 400px;
     padding: 20px;
     color: white;
-    background:transparent
+    background:transparent;
     box-shadow:   
     0 0 2px #ff6600,
     0 0 3px #ff3300,
-    0 0 4px #ff0000;;
+    0 0 4px #ff0000;
     border-radius: 40px;
     font-family: 'Impact', sans-serif;
     text-shadow: 
