@@ -120,10 +120,6 @@ main{
     padding: 20px;
     color: white;
     background:transparent;
-    box-shadow:   
-    0 0 2px #ff6600,
-    0 0 3px #ff3300,
-    0 0 4px #ff0000;
     border-radius: 40px;
     font-family: 'Impact', sans-serif;
     text-shadow: 
@@ -294,6 +290,17 @@ span{
         0 0 3px #ff3300,
         0 0 4px #ff0000;
 }
+.button_project:hover i{
+  transform: rotate(360deg);
+  transition: all 0.6s ease;
+  color: white;
+  background: linear-gradient(to top, red, orange, yellow);
+  background-clip: text;
+  text-shadow:
+        0 0 2px #ff6600,
+        0 0 3px #ff3300,
+        0 0 4px #ff0000;  
+}
 .start:hover i{
   transform: rotate(360deg);
   transition: all 0.6s ease;
@@ -368,13 +375,21 @@ section{
   align-items: center;
 }
 .imgbackground{
-  background: white;
+  background: black;
   animation: picture 2s infinite alternate ease-in-out;
+}
+.imgbackground2{
+  height: 440px;
+}
+.imgbackground3{
+  max-width: 290px;
+  height: 450px;
 }
 .text_lifestyle{
   display: flex;
   justify-content: center;
   height: 50px;
+  padding: 5px 5px;
   color: white;
   font-family: 'Impact', sans-serif;
   font-size: 30px;
@@ -387,7 +402,7 @@ section{
 .imglstyle{
   max-width: 340px;
   max-height: 340px;
-  border: 7px solid white;
+  border: 7px solid black;
   display: block;
 }
 @keyframes picture {
@@ -400,9 +415,58 @@ section{
   max-width: 330px;
 }
 .img3{
+  max-height: 320px;
+  max-width: 300px;
+}
+.img2{
+  max-height: 320px;
+  max-width: 330px;
+}
+.imgbackground p{
+  color: white;
   max-height: 330px;
   max-width: 330px;
-
+  padding: 1px 7px 6px 10px;
+}
+.p3{
+  justify-content: center;
+  align-items: center;
+}
+.text_icon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 200px;
+  margin-bottom: 30px;
+  font-weight: bold;
+  background: linear-gradient(to top, red, orange, yellow);
+  background-clip: text;
+  text-shadow:
+    0 0 2px #ff6600,
+    0 0 3px #ff3300,
+    0 0 4px #ff0000;
+  font-family: 'Impact', sans-serif;
+  animation: blinkColor 2s infinite;
+}
+.iconcontact a{
+  color: white;
+}
+.iconcontact{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  font-size: 30px;
+}
+.custom_hr{
+  border: none;
+  height: 2px;
+  background-color: white;
+  width: 300px;
+  margin-top: 10px;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
 }
 /* flame */
 .fire-container {
