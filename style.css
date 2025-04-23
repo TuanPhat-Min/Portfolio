@@ -116,6 +116,7 @@ main{
     gap: 20px;
     border:2px solid whitesmoke ;
     max-width: 260px;
+    max-height: 500px;
     height: 400px;
     padding: 20px;
     color: white;
