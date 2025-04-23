@@ -30,7 +30,7 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 50px;
+    margin-bottom: 200px;
     font-family: 'Impact', sans-serif;
 }
 .logo{
@@ -56,16 +56,31 @@ header{
 }
 nav{
     margin-right: 80px;
+    padding: 16px;
 }
 nav ul{
-    display: flex;
-    gap: 100px;
-    list-style: none;
-    font-size: 25px;
+  display: flex;
+  gap: 100px;
+  list-style: none;
+  font-size: 25px;
 }
-nav a{
-    text-decoration: none;
-    color: white;
+li a{
+  position: relative;
+  text-decoration: none;
+  color: white;
+}
+a::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 4px;
+  background-color: white;
+  transition: width 0.3s ease; 
+}
+a:hover::before{
+  width: 100%;
 }
 .button{
     background-color: white;
@@ -76,6 +91,15 @@ nav a{
     color: black;
     cursor: pointer;
     font-size: 20px;
+    transition: all 0.6s ease;
+}
+.button:hover{
+transform: translateY(-5px);
+box-shadow:0 0 20px white ;
+}
+.button:hover i{
+  transform: rotate(360deg);
+  transition: all 0.6s ease;
 }
 /* Header */
 /* Main */
@@ -83,7 +107,7 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 200px;
     gap: 60px;
 }
 .content{
@@ -95,7 +119,7 @@ main{
     height: 400px;
     padding: 20px;
     color: white;
-    background:linear-gradient(100deg,rgba(173, 7, 7, 1) 35%, rgba(41, 29, 29, 1) 75%);
+    background:transparent
     box-shadow:   
     0 0 2px #ff6600,
     0 0 3px #ff3300,
@@ -107,8 +131,17 @@ main{
     1px -1px 0 black,
     -1px  1px 0 black,
     1px  1px 0 black;
-    
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: slideLeft 1s ease-out forwards;
 }
+@keyframes slideLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+} 
+
 span{
     background: linear-gradient(to top, red, orange, yellow);
         background-clip: text;
@@ -172,9 +205,36 @@ span{
     justify-content: center;
     text-align: center;
     padding: 5px;
+    transition: all 0.6s ease;
+    cursor: pointer;
+    
+}
+.readmore:hover i{
+  transform: rotate(360deg);
+  transition: all 0.6s ease;
+  color: white;
+  background: linear-gradient(to top, red, orange, yellow);
+  background-clip: text;
+  text-shadow:
+        0 0 2px #ff6600,
+        0 0 3px #ff3300,
+        0 0 4px #ff0000;  
 }
 .readmore h2{
     font-size: 15px;
+}
+.readmore:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 0 10px #ff6600,
+  0 0 12px #ff3300,
+  0 0 10px #ff0000;
+  color: white;
+  background: linear-gradient(to top, red, orange, yellow);
+  background: white;
+  text-shadow:
+        0 0 2px #ff6600,
+        0 0 3px #ff3300,
+        0 0 4px #ff0000;
 }
 .picture{
     border:2px solid whitesmoke ;
@@ -198,6 +258,15 @@ span{
     padding: 20px;
     border-radius: 40px;
     background: linear-gradient(100deg,rgba(41, 29, 29, 1) 35%, rgba(173, 7, 7, 1) 75%);
+    opacity: 0;
+    transform: translateX(100%);
+    animation: slideRight 1s ease-out forwards;
+}
+@keyframes slideRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 .button_project{
     display: flex;
@@ -210,6 +279,130 @@ span{
     height: 120px;
     gap: 5px;
     cursor: pointer;
+    transition: all 0.6s ease;
+}
+.button_project:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 0 10px #ff6600,
+  0 0 12px #ff3300,
+  0 0 10px #ff0000;
+  color: white;
+  background: linear-gradient(to top, red, orange, yellow);
+  background: white;
+  text-shadow:
+        0 0 2px #ff6600,
+        0 0 3px #ff3300,
+        0 0 4px #ff0000;
+}
+.start:hover i{
+  transform: rotate(360deg);
+  transition: all 0.6s ease;
+  color: white;
+  background: linear-gradient(to top, red, orange, yellow);
+  background-clip: text;
+  text-shadow:
+        0 0 2px #ff6600,
+        0 0 3px #ff3300,
+        0 0 4px #ff0000;  
+}
+/* project */
+/* section */
+section{
+  margin-top: 250px;
+}
+.HOBBIES{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 100px;
+  margin-bottom: 50px;
+  font-size: 70px;
+  font-weight: bold;
+  background: linear-gradient(to top, red, orange, yellow);
+  background-clip: text;
+  text-shadow:
+    0 0 2px #ff6600,
+    0 0 3px #ff3300,
+    0 0 4px #ff0000;
+  font-family: 'Impact', sans-serif;
+  color: white;
+  animation: blinkColor 2s infinite;
+  margin-left: 30px;
+}
+@keyframes blinkColor{
+  0% {
+    text-shadow:
+    0 0 2px #ff6600,
+    0 0 3px #ff3300,
+    0 0 4px #ff0000;;
+  }
+  25% {
+    text-shadow:
+    0 0 5px #ff6600,
+    0 0 6px #ff3300,
+    0 0 7px #ff0000;
+  }
+  50% {
+    text-shadow:
+    0 0 8px #ff6600,
+    0 0 9px #ff3300,
+    0 0 10px #ff0000;
+  }
+  75% {
+    text-shadow:
+    0 0 5px #ff6600,
+    0 0 6px #ff3300,
+    0 0 7px #ff0000;
+  }
+  100% {
+    text-shadow:
+    0 0 2px #ff6600,
+    0 0 3px #ff3300,
+    0 0 4x #ff0000;
+  }
+}
+.lifestyle{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.imgbackground{
+  background: white;
+  animation: picture 2s infinite alternate ease-in-out;
+}
+.text_lifestyle{
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  color: white;
+  font-family: 'Impact', sans-serif;
+  font-size: 30px;
+  text-shadow: 
+    -1px -1px 0 black,
+    1px -1px 0 black,
+    -1px  1px 0 black,
+    1px  1px 0 black;
+}
+.imglstyle{
+  max-width: 340px;
+  max-height: 340px;
+  border: 7px solid white;
+  display: block;
+}
+@keyframes picture {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+.img1{
+  max-height: 330px;
+  max-width: 330px;
+}
+.img3{
+  max-height: 330px;
+  max-width: 330px;
+
 }
 /* flame */
 .fire-container {
