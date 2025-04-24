@@ -33,27 +33,106 @@ header{
     margin-bottom: 200px;
     font-family: 'Impact', sans-serif;
 }
-.logo{
-        font-size: 60px;
-        font-weight: bold;
-        background: linear-gradient(to top, red, orange, yellow);
-        background-clip: text;
-        text-shadow:
-          0 0 2px #ff6600,
-          0 0 3px #ff3300,
-          0 0 4px #ff0000;
-        font-family: 'Impact', sans-serif;
-        color: white;
-        transition: all 0.6s ease;
-        cursor: pointer;
+.glitch{
+  font-size: 60px;
+  font-weight: bold;
+  background: linear-gradient(to top, red, orange, yellow);
+  background-clip: text;
+  text-shadow:
+    0 0 2px #ff6600,
+    0 0 3px #ff3300,
+    0 0 4px #ff0000;
+  font-family: 'Impact', sans-serif;
+  color: white;
+  transition: all 0.6s ease;
+  cursor: pointer;
+  position: relative;
 }
-.logo:hover{
-    transform: translateY(-5px);
+.glitch:hover{
     text-shadow: 
     0 0 10px #ff6600,
     0 0 12px #ff3300,
     0 0 10px #ff0000;
 }
+/* animation glitch */
+.glitch:before,
+.glitch:after {
+    content: "TUANPHAT";
+    position: absolute;
+    left: 2px;
+    z-index: -1;
+    visibility: hidden;
+} 
+.glitch:before {
+  animation: glitchTop 1.2s linear infinite;
+  clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+}
+
+.glitch:after {
+  animation: glitchBotom 1.7s linear infinite;
+  clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+}
+
+@keyframes glitch {
+
+  0%{
+    transform: skew(0deg);
+  }
+  60% {
+      transform: skew(5deg);
+  }
+
+  62% {
+      transform: translate(-10px, 2px) skew(30deg);
+  }
+
+  64% {
+      transform: translate(6px, -1px) skew(-15deg);
+  }
+
+}
+
+@keyframes glitchTop {
+
+  1%,
+  60% {
+      transform: translate(-2px, 0);
+      visibility: visible;
+  }
+
+  64% {
+      transform: translate(-5px, 1px);
+      visibility: visible;
+  }
+
+  62% {
+      transform: translate(15px, -1px) skew(-13deg);
+      visibility: visible;
+  }
+}
+
+@keyframes glitchBotom {
+
+  1%,
+  64% {
+      transform: translate(-2px, 0);
+      visibility: visible;
+  }
+
+  4%,
+  60% {
+      transform: translate(-2px, 0);
+      visibility: visible;
+  }
+
+  62% {
+      transform: translate(-22px, 5px) skew(21deg);
+      visibility: visible;
+  }
+}
+/* animation glitch */
 nav{
     margin-right: 80px;
     padding: 16px;
@@ -116,11 +195,10 @@ main{
     gap: 20px;
     border:2px solid whitesmoke ;
     max-width: 260px;
-    max-height: 500px;
     height: 400px;
     padding: 20px;
     color: white;
-    background:transparent;
+    background: transparent;
     border-radius: 40px;
     font-family: 'Impact', sans-serif;
     text-shadow: 
@@ -132,13 +210,14 @@ main{
     transform: translateX(-100%);
     animation: slideLeft 1s ease-out forwards;
 }
+/* animation slideLeft */
 @keyframes slideLeft {
   to {
     opacity: 1;
     transform: translateX(0);
   }
 } 
-
+/* animation slideLeft */
 span{
     background: linear-gradient(to top, red, orange, yellow);
         background-clip: text;
@@ -242,11 +321,13 @@ span{
     animation: picture 2s infinite alternate ease-in-out;
     display: inline-block;
 }
+/* animation translate up down */
 @keyframes picture {
     0%   { transform: translateY(0); }
     50%  { transform: translateY(-10px); }
     100% { transform: translateY(0); }
   }
+/* animation translate up down */
 .project{
     display: flex;
     flex-direction: column;
@@ -261,12 +342,14 @@ span{
     transform: translateX(100%);
     animation: slideRight 1s ease-out forwards;
 }
+/* animation slideRight */
 @keyframes slideRight {
   to {
     opacity: 1;
     transform: translateX(0);
   }
 }
+/* animation slideRight */
 .button_project{
     display: flex;
     flex-direction: column;
@@ -340,6 +423,7 @@ section{
   animation: blinkColor 2s infinite;
   margin-left: 30px;
 }
+/* animation blinkColor */
 @keyframes blinkColor{
   0% {
     text-shadow:
@@ -372,6 +456,7 @@ section{
     0 0 4x #ff0000;
   }
 }
+/* animation blinkColor */
 .lifestyle{
   display: flex;
   flex-direction: row;
@@ -408,11 +493,6 @@ section{
   max-height: 340px;
   border: 7px solid black;
   display: block;
-}
-@keyframes picture {
-  0%   { transform: translateY(0); }
-  50%  { transform: translateY(-10px); }
-  100% { transform: translateY(0); }
 }
 .img1{
   max-height: 330px;
