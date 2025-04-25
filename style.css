@@ -6,15 +6,14 @@
 body{
     background: black;
     background: linear-gradient(100deg,rgba(0, 0, 0, 1) 20%, rgba(255, 0, 0, 1) 80%);
-    min-height: 100vh;
-    min-width: 1300px; 
     color: white;
+    min-height: auto;
 }
 .background {
   position: fixed;
   top: 0;
   left: 0;
-  min-width: 1300px;
+  min-height: auto;
   width: 100%;
   height: 100%;
   background: linear-gradient(100deg, rgba(0, 0, 0, 1) 20%, rgba(255, 0, 0, 1) 80%);
@@ -246,6 +245,7 @@ span{
     transition: all 0.6s ease;
     cursor: pointer;
     color: black;
+    background: white;
 }
 .start h2{
     font-size: 15px;
@@ -315,17 +315,20 @@ span{
         0 0 4px #ff0000;
 }
 .picture{
-    border:2px solid whitesmoke ;
-    border-radius: 100px;
-    overflow: hidden;
     animation: picture 2s infinite alternate ease-in-out;
     display: inline-block;
+}
+.picture img{
+  border:2px solid whitesmoke;
+  border-radius: 100px;
+  overflow: hidden;
 }
 /* animation translate up down */
 @keyframes picture {
     0%   { transform: translateY(0); }
     50%  { transform: translateY(-10px); }
     100% { transform: translateY(0); }
+    
   }
 /* animation translate up down */
 .project{
@@ -646,3 +649,23 @@ a:hover::before{
     }
   }
   /* flame */
+  /* reponsive */
+  @media (max-width: 2000px) {
+    body{
+      min-width: 1300px
+    }
+    .background{
+      min-width: 1300px
+    }
+    .fire-container{
+      min-width: 1300px
+    }
+}
+@media (max-width:320px){ 
+  .container{
+   
+  }
+  
+  
+  
+}
