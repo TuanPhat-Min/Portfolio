@@ -732,8 +732,12 @@ main{
   font-size: 5px;
 }
 .Description{
-  max-width: 80px;
-  max-height: 20px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 3;
+  line-height: 1.6em;
+  max-height: calc(1.6em * 3);
 }
 .button_content{
   gap: 3px;
