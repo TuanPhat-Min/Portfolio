@@ -732,7 +732,9 @@ main{
   font-size: 5px;
 }
 .Description{
-  font-size: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .button_content{
   gap: 3px;
