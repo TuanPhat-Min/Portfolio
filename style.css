@@ -731,6 +731,9 @@ main{
 .content p{
   font-size: 5px;
 }
+.Description{
+  white-space: nowrap;
+}
 .button_content{
   gap: 3px;
 }
