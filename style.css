@@ -708,6 +708,7 @@ li a{
 }
 .button p{
   font-size: 8px;
+  flex-wrap: nowrap;
 }
 a::before{
   height: 1px;
